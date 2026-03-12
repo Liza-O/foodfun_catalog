@@ -1,0 +1,543 @@
+/*  Общие стили  */
+.content,
+.sorting,
+.catalog-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sorting {
+    align-items: center;
+    gap: 10px;
+}
+
+.sorting-option {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.sorting-option::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-75%) rotate(225deg);
+    width: 12px;
+    height: 12px;
+    border-left: 1px solid orange;
+    border-top: 1px solid orange;
+    box-sizing: border-box;
+}
+
+.catalog {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+/*  Блок фильтров  */
+.block-filters {
+    position: relative;
+    width: 293px;
+    height: fit-content;
+    flex-shrink: 0;
+    background-color: #FDFAF2;
+    border-radius: 20px;
+    padding: 30px 30px 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.filter-label {
+    position: relative;
+    padding-right: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.filter-label::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) rotate(225deg);
+    width: 12px;
+    height: 12px;
+    border-left: 1px solid orange;
+    border-top: 1px solid orange;
+    border-bottom: none;
+    box-sizing: border-box;
+}
+
+.filter-item:not(:last-child) {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.filter-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #FFAE00;
+}
+
+/*  Основной контент  */
+.content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    min-height: 800px;
+}
+
+/*  Раскрывающиеся фильтры  */
+.block-filters .text-large {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.filter-item {
+    border-bottom: 1px solid #FFAE00;
+    padding-bottom: 15px;
+}
+
+.filter-item:last-child {
+    border-bottom: none;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.filter-header .filter-label {
+    position: static;
+    padding-right: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0;
+}
+
+.filter-header .filter-label::after {
+    display: none;
+}
+
+.filter-arrow {
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid #FFAE00;
+    border-top: 2px solid #FFAE00;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.filter-item.active .filter-arrow {
+    transform: rotate(135deg);
+}
+
+.filter-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    margin-top: 0;
+}
+
+.filter-item.active .filter-content {
+    max-height: 1000px;
+
+}
+
+/*  Чекбоксы  */
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #000;
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-label .checkmark {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #FFAE00;
+    background-color: transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+}
+
+.checkbox-label input[type="checkbox"]:checked~.checkmark {
+    background-color: #FFAE00;
+    border-color: #FFAE00;
+    position: relative;
+}
+
+.checkbox-label input[type="checkbox"]:checked~.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    box-sizing: border-box;
+}
+
+/*  Поля времени  */
+.range-inputs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.range-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.range-item label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #FFAE00;
+}
+
+.range-number {
+    width: 70px;
+    padding: 8px;
+    border: 1px solid #FFAE00;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.range-number:focus {
+    outline: none;
+    border-color: #FFAE00;
+}
+
+@media (max-width: 768px) {
+    .range-inputs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*  Подсказка КБЖУ  */
+.recipe-card {
+    position: relative;
+    width: calc((100% - 40px) / 3);
+    min-width: 250px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 15px;
+    overflow: visible;
+    transition: transform 0.2s, box-shadow 0.2s;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card .nutrition-tooltip {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateZ(0);
+    width: 133px;
+    height: 120px;
+    background-color: #FFAE00;
+    border-radius: 15px;
+    padding: 15px 12px;
+    box-shadow: 0 4px 15px rgba(255, 174, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    pointer-events: none;
+    will-change: opacity, visibility;
+    right: -140px;
+}
+
+.recipe-card .nutrition-tooltip.left {
+    left: -140px;
+    right: auto;
+}
+
+.recipe-card:hover .nutrition-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-calories {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-calories span {
+    font-weight: 600;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-macros {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-macros div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-macros .macro-name {
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.recipe-card .nutrition-tooltip .tooltip-macros .macro-value {
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .recipe-card .nutrition-tooltip {
+        width: 120px;
+        height: 110px;
+        padding: 12px 10px;
+    }
+
+    .recipe-card .nutrition-tooltip .tooltip-calories {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .recipe-card .nutrition-tooltip .tooltip-macros {
+        font-size: 11px;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 992px) {
+    .recipe-card .nutrition-tooltip {
+        display: none;
+    }
+}
+
+/*  Заголовок и поиск  */
+.catalog-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.catalog-title-text {
+    font-family: 'Arsenal', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 430px;
+    height: 40px;
+}
+
+.search-input {
+    width: 100%;
+    height: 100%;
+    padding: 0 45px 0 20px;
+    border: 2px solid #FFAE00;
+    border-radius: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #333;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-image: url('img/search.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-suggestions div {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.search-suggestions div:last-child {
+    border-bottom: none;
+}
+
+.search-suggestions div:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .catalog-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .catalog-title-text {
+        font-size: 28px;
+    }
+
+    .search-wrapper {
+        width: 100%;
+        max-width: 430px;
+    }
+}
+
+/*  Избранное и прочие элементы  */
+.favorite-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    background: url('img/heart-empty.svg') no-repeat center/contain;
+    z-index: 10;
+    transition: transform 0.2s;
+}
+
+.favorite-icon.active {
+    background-image: url('img/heart-filled.svg');
+}
+
+.favorite-icon:hover {
+    transform: scale(1.1);
+}
+
+.add-recipe-circle {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background-color: #FFAE00;
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cline x1='2' y1='9.5' x2='17' y2='9.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='9.5' y1='2' x2='9.5' y2='17' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 19px 19px;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.add-recipe-circle:hover {
+    background-color: #e69c00;
+}
+
+.recipe-card .recipe-ingredients {
+    height: 38px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+}

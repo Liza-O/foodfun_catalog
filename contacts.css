@@ -1,0 +1,235 @@
+.contact-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 0;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 500px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+}
+
+.form-input::placeholder {
+    color: #999;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFAE00;
+}
+
+.form-textarea {
+    width: 500px;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-textarea::placeholder {
+    color: #999;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #FFAE00;
+}
+
+.form-note {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 30px 0;
+    text-align: left;
+    width: 500px;
+}
+
+.submit-btn {
+    width: 200px;
+    height: 40px;
+    background-color: #FFAE00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Исправленное позиционирование хинта */
+.form-hint {
+    display: none;
+    position: absolute;
+    top: 100%; /* Теперь хинт начинается сразу после нижней границы поля */
+    left: 0;
+    width: 500px; /* Такая же ширина как у поля ввода */
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 10;
+    white-space: normal;
+    line-height: 1.4;
+    margin-top: -16px; /* Небольшой отступ от поля */
+}
+
+/* Исправленная стрелочка */
+.form-hint::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    transform: rotate(45deg);
+}
+
+/* Для textarea - аналогичное позиционирование */
+.form-textarea + .form-hint {
+    top: 100%; /* Аналогично обычным полям */
+    margin-top: -16px;
+}
+
+/* Стрелочка для textarea */
+.form-textarea + .form-hint::before {
+    top: -6px;
+    left: 20px;
+}
+
+/*
+.form-hint {
+    display: none;
+    position: absolute;
+    top: 100%;                 
+    left: 50%;                
+    width: 280px;             
+    font-size: 12px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px 15px;
+    z-index: 10;
+    white-space: normal;
+    line-height: 1.4;
+    margin-top: -16px;        
+    transform: translateX(-50%); 
+}
+
+
+.form-hint::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;                 
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    transform: translateX(-50%) rotate(45deg); 
+}
+
+
+.form-textarea + .form-hint {
+    top: 100%;
+    margin-top: -16px;
+    left: 50%;
+    width: 280px;
+    transform: translateX(-50%);
+}
+
+.form-textarea + .form-hint::before {
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}*/
+
+.form-error {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: #d63031;
+    margin-top: 6px;
+    min-height: 18px;
+    visibility: hidden;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.form-error.visible {
+    visibility: visible;
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: #d63031;
+}
+
+.error-messages {
+    display: none;
+    color: #d63031;
+    margin-top: 20px;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.error-messages ul {
+    margin: 10px 0 0 0;
+    padding-left: 20px;
+}
+
+.error-messages li {
+    margin-bottom: 5px;
+    font-family: 'Raleway', sans-serif;
+}

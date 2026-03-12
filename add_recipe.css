@@ -1,0 +1,414 @@
+.form-section {
+    margin-bottom: 64px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+h1.text-large {
+    font-size: 64px;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.form-input {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid #E0E0E0;
+    padding: 0 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #FFAE00;
+}
+
+.form-input::placeholder {
+    color: #B6B2B2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    opacity: 1;
+}
+
+textarea.form-input {
+    height: auto;
+    min-height: 120px;
+    padding: 16px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-hint {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #000000;
+    margin-top: 6px;
+}
+
+.submit-btn {
+    display: block;
+    width: 245px;
+    height: 50px;
+    background-color: #FFAE00;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: 0;
+    text-decoration: none;
+    line-height: 50px;
+    text-align: center;
+    padding: 0;
+}
+
+.submit-btn:hover {
+    background-color: #e69c00;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.form-row .form-field {
+    margin-bottom: 0;
+}
+
+.form-field--wide {
+    width: 100%;
+}
+
+.form-field--narrow {
+    width: 297px;
+}
+
+.text-large {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #000000;
+}
+
+.text-normal {
+    font-size: 14px;
+    margin-bottom: 24px;
+    color: #333;
+}
+
+/* ===== Состав ===== */
+.ingredients-list {
+    margin-bottom: 16px;
+}
+
+.ingredient-row {
+    margin-bottom: 24px;
+}
+
+.quantity-wrapper {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+}
+
+.quantity-wrapper input {
+    flex: 1;
+    min-width: 0;
+}
+
+.quantity-wrapper .unit-select {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+.form-field--placeholder {
+    width: 400px;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    pointer-events: none;
+    border: none;
+}
+
+/* ===== Кастомный select ===== */
+select.form-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23B6B2B2'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 20px;
+    padding-right: 40px;
+    color: #000;
+}
+
+select.form-input[required]:invalid {
+    color: #B6B2B2;
+}
+
+select.form-input option[value=""][disabled] {
+    display: none;
+}
+
+select.form-input option:not([value=""]) {
+    color: #000;
+}
+
+/* ===== Кнопки добавления ===== */
+.add-ingredient-btn {
+    display: block;
+    width: 245px;
+    height: 50px;
+    background-color: #FFAE00;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 32px;
+    line-height: 50px;
+    padding: 0 45px 0 16px;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cline x1='2' y1='9.5' x2='17' y2='9.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='9.5' y1='2' x2='9.5' y2='17' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 19px 19px;
+}
+
+.add-ingredient-btn:hover {
+    background-color: #e69c00;
+}
+
+.remove-btn {
+    width: 19px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cline x1='2' y1='2' x2='17' y2='17' stroke='%23FFAE00' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='17' y1='2' x2='2' y2='17' stroke='%23FFAE00' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 19px 19px;
+    flex-shrink: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.form-field--remove {
+    width: 400px;
+    height: 50px;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.form-field--remove .remove-btn {
+    margin-left: 0;
+}
+
+/* ===== Приготовление ===== */
+.steps-list {
+    margin-bottom: 16px;
+}
+
+.step-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+}
+
+.step-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.step-field .form-input {
+    width: 100%;
+    height: 50px;
+}
+
+.step-remove-container {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step-remove-btn {
+    width: 19px;
+    height: 19px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cline x1='2' y1='2' x2='17' y2='17' stroke='%23FFAE00' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='17' y1='2' x2='2' y2='17' stroke='%23FFAE00' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
+    padding: 0;
+    margin-top: 45px;
+    text-align: center;
+}
+
+.step-remove-btn:hover {
+    opacity: 0.7;
+}
+
+.step-placeholder {
+    width: 40px;
+    height: 50px;
+    visibility: hidden;
+    flex-shrink: 0;
+}
+
+.add-step-btn {
+    display: block;
+    width: 245px;
+    height: 50px;
+    background-color: #FFAE00;
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 32px;
+    line-height: 50px;
+    padding: 0 45px;
+    text-align: center;
+    box-sizing: border-box;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='19' viewBox='0 0 19 19'%3E%3Cline x1='2' y1='9.5' x2='17' y2='9.5' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='9.5' y1='2' x2='9.5' y2='17' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 19px 19px;
+}
+
+.add-step-btn:hover {
+    background-color: #e69c00;
+}
+
+/* ===== Медиафайлы ===== */
+.media-field {
+    margin-bottom: 32px;
+}
+
+.file-upload {
+    height: 70px;
+    width: 100%;
+    border: 2px dashed #E0E0E0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.file-upload input[type="file"] {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.file-upload label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #B6B2B2;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: border-color 0.2s;
+}
+
+.file-upload label:hover {
+    border-color: #FFAE00;
+}
+
+.file-upload input[type="file"]:focus+label {
+    outline: 2px solid #FFAE00;
+    outline-offset: 2px;
+}
+
+/* ===== Ошибки ===== */
+.form-error {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ff4444;
+    margin-top: 4px;
+    display: none;
+}
+
+.form-error.visible {
+    display: block;
+}
+
+.form-input.error {
+    border-color: #ff4444 !important;
+}
+
+.form-input.error:focus {
+    border-color: #ff4444 !important;
+}
+
+select.form-input.error {
+    border-color: #ff4444 !important;
+}
+
+.form-hint,
+.form-error {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-bottom: 0;
+    min-height: calc(1.5 * 12px);
+}

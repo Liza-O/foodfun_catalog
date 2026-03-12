@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог: лайфхаки, карвинг, ЗОЖ, сервировка | Foodfun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/logo.png" alt="На главную" class="logo" onerror="this.src='img/default-image.png';">
+        </a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="recipes.html">Рецепты</a>
+            <a href="ingredients.html">Ингредиенты</a>
+            <a href="blog.html" class="active">Блог</a>
+            <a href="guide.html">Справочник</a>
+            <a href="about_us.html">О нас</a>  
+        </nav>
+       <a href="contacts.html" class="contact-btn">
+            Связаться с нами
+            <img src="img/send.png" alt="Сообщение" class="btn-icon" onerror="this.src='img/default-image.png';">
+        </a>
+    </header>
+    <main>
+        <p class="text-pseudo">Главная > Блог</p>
+        <div class="blog-content">
+            <div class="blog-themes">
+                <p class="text-large themes-title">Темы</p>
+                <div class="theme-item">
+                    <p class="text-normal active">Все темы</p>
+                    <p class="text-pseudo active">26</p>
+                </div>
+                <div class="theme-item">
+                    <p class="text-normal">ЗОЖ</p>
+                    <p class="text-pseudo">13</p>
+                </div>
+                <div class="theme-item">
+                    <p class="text-normal">Лайфхаки</p>
+                    <p class="text-pseudo">10</p>
+                </div>
+                <div class="theme-item">
+                    <p class="text-normal">Карвинг</p>
+                    <p class="text-pseudo">3</p>
+                </div>
+                <div class="theme-item">
+                    <p class="text-normal">Сервировка</p>
+                    <p class="text-pseudo">1</p>
+                </div>
+            </div>
+            <div class="articles-container">
+                <a href="blog_article.html" class="article-card">
+                    <div class="article-image-container">
+                        <img src="img/product.jpg" alt="Продукты с отрицательной калорийностью" class="article-image" onerror="this.src='img/default-image.png.png'">
+                        <div class="theme-badge"> 
+                            <p>ЗОЖ</p>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p class="text-pseudo">23 августа 16:03</p>
+                        <p class="text-large">Продукты с "отрицательной" калорийностью</p>
+                    </div>
+                </a>
+                
+                <a href="blog_article.html" class="article-card">
+                    <div class="article-image-container">
+                        <img src="img/life.jpg" alt="Лайфхак для кухни" class="article-image" onerror="this.src='img/default-image.png'">
+                        <div class="theme-badge"> 
+                            <p>Лайфхаки</p>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p class="text-pseudo">22 августа 14:20</p>
+                        <p class="text-large">5 способов нарезать лук без слез</p>
+                    </div>
+                </a>
+                
+                <a href="blog_article.html" class="article-card">
+                    <div class="article-image-container">
+                        <img src="img/karving.jpg" alt="Карвинг" class="article-image" onerror="this.src='img/default-image.png'">
+                        <div class="theme-badge"> 
+                            <p>Карвинг</p>
+                        </div>
+                    </div>
+                    <div class="article-content">
+                        <p class="text-pseudo">21 августа 11:45</p>
+                        <p class="text-large">Искусство карвинга для начинающих</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2025, Foodfun <br> Любое использование контента без письменного разрешения Foodfun запрещено.</p>  
+    </footer>
+</body>
+</html>

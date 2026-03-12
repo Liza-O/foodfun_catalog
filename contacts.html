@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты: обратная связь, вопросы и поддержка | Foodfun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/logo.png" alt="На главную" class="logo" onerror="this.src='img/default-image.png';">
+        </a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="recipes.html">Рецепты</a>
+            <a href="ingredients.html">Ингредиенты</a>
+            <a href="blog.html">Блог</a>
+            <a href="guide.html">Справочник</a>
+            <a href="about_us.html">О нас</a>  
+        </nav>
+       <a href="contacts.html" class="contact-btn">
+            Связаться с нами
+            <img src="img/send.png" alt="Сообщение" class="btn-icon" onerror="this.src='img/default-image.png';">
+        </a>
+    </header>
+    <main>
+        <p class="text-pseudo">Главная > Контакты</p>
+        
+        <div class="contact-container">
+            <p class="text-title text-center">Свяжитесь с нами</p>
+            <p class="text-normal text-center">
+                Если у вас есть вопросы или предложения к команде Foodfun, воспользуйтесь формой обратной связи.
+            </p>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="lastname" class="form-label">Фамилия *</label>
+                    <input type="text" id="lastname" name="lastname" class="form-input" placeholder="Введите фамилию" required>
+                    <div class="form-hint">Только кириллические буквы, не менее 2 символов, не более 20</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="firstname" class="form-label">Имя *</label>
+                    <input type="text" id="firstname" name="firstname" class="form-input" placeholder="Введите имя" required>
+                    <div class="form-hint">Только кириллические буквы, не менее 2 символов, не более 20</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Введите телефон" required>
+                    <div class="form-hint">Формат: +7 (ХХХ) ХХ-ХХ-ХХ</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="age" class="form-label">Возраст *</label>
+                    <input type="number" id="age" name="age" class="form-input" placeholder="Введите возраст" required>
+                    <div class="form-hint">От 18 до 120 лет</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Введите email" required>
+                    <div class="form-hint">Формат: example@domain.com</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <!-- Новое поле с датой в текстовом формате -->
+                <div class="form-group">
+                    <label for="date" class="form-label">Желаемая дата контакта *</label>
+                    <input type="text" id="date" name="date" class="form-input" placeholder="Введите дату" required>
+                    <div class="form-hint">Формат: ДД.ММ.ГГГГ (например, 25.12.2024).<br>Дата должна быть не ранее сегодняшней и не позднее, чем через 1 год</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Сообщение *</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Введите ваши вопросы или предложения" required></textarea>
+                    <div class="form-hint">Не менее 10 символов, не более 500 символов</div>
+                    <div class="form-error"></div>
+                </div>
+                
+                <p class="form-note">* - обязательные поля</p>
+                
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+            <div id="errorMessages" class="error-messages"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;2025, Foodfun <br> Любое использование контента без письменного разрешения Foodfun запрещено.</p>  
+    </footer>
+    
+    <script src="validation.js"></script>
+</body>
+</html>

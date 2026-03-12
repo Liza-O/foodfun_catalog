@@ -1,0 +1,15 @@
+.about-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 70px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-icon {
+    height: 200px;
+    width: auto;
+}
+

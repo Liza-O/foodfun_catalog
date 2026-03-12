@@ -1,0 +1,307 @@
+/*Заголовки*/
+h1 {
+    font-family: Arsenal, sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 0.9;
+    margin: 0 0 20px 0;
+}
+
+h2 {
+    font-family: Arsenal, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 0.85;
+    margin: 40px 0 20px 0;
+}
+
+h3 {
+    font-family: 'Raleway', sans-serif;
+    margin: 20px 0 10px 0;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+/*Для обычного текста*/
+p {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+.text-normal {
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+}
+
+.text-large {
+    font-size: 20px;
+    color: #000000;
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-accent {
+    color: #FFAE00;
+}
+
+.text-subtitle {
+    font-family: Arsenal, sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    margin: 0;
+}
+
+.text-title {
+    font-family: Arsenal, sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 0.85;
+    margin: 0 0 20px 0;
+}
+
+.text-pseudo {
+    color: #B6B2B2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/*Общие*/
+* {
+    box-sizing: border-box;
+}
+
+main {
+    background: #FFF;
+    color: #000;
+    padding: 30px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/*Шапка*/
+header {
+    background: #FFF;
+    color: #000;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a.active {
+    color: #FFAE00;
+    text-decoration: underline;
+}
+
+.logo {
+    height: 40px;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    background-color: #FFAE00;
+    color: #FFF;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    gap: 10px;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/*Футер*/
+footer {
+    background-color: #FDFAF2;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFAE00;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Карточки рецепта*/
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recipe-card {
+    width: 293px;
+    height: 340px;
+    background-color: #FFF;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.recipe-text {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.specifications {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFAE00;
+}
+
+.icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    width: 50px;
+    height: 50px;
+    background-color: #FFAE00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+#scrollTopBtn:hover {
+    background-color: #e09b00;
+}
+
+/* Кнопка прокрутки вверх */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #FFAE00;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.favorites-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.heart-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.2s;
+}
+
+.favorites-link:hover .heart-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FFAE00"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+}

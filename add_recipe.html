@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить рецепт | Foodfun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipe_description.css">
+    <link rel="stylesheet" href="add_recipe.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/logo.png" alt="На главную" class="logo" onerror="this.src='img/default-image.png';">
+        </a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="recipes.html" class="active">Рецепты</a>
+            <a href="ingredients.html">Ингредиенты</a>
+            <a href="blog.html">Блог</a>
+            <a href="guide.html">Справочник</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+        <a href="contacts.html" class="contact-btn">
+            Связаться с нами
+            <img src="img/send.png" alt="Сообщение" class="btn-icon" onerror="this.src='img/default-image.png';">
+        </a>
+    </header>
+    <main>
+        <p class="text-pseudo">Главная > Рецепты > Добавить рецепт</p>
+        <h1 class="text-large">Добавить рецепт</h1>
+
+        <form id="addRecipeForm">
+            <div class="form-section">
+                <p class="text-large">Основная информация</p>
+                <p class="text-normal">Заполните основную информацию</p>
+
+                <div class="form-row">
+                    <div class="form-field">
+                        <label class="form-label">Название</label>
+                        <input type="text" class="form-input" id="title" placeholder="Введите название">
+                        <div class="form-hint">От 5 до 100 символов</div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Время приготовления, мин</label>
+                        <input type="text" class="form-input" id="cookingTime" placeholder="Введите время">
+                        <div class="form-hint">Целое число от 1 до 200</div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Тип блюда *</label>
+                        <select class="form-input dish-type-select">
+                            <option value="" disabled selected>Выберите тип</option>
+                        </select>
+                        <div class="form-hint">Выберите один тип</div>
+                        <div class="form-error"></div>
+                    </div>
+                </div>
+
+                <div class="form-field form-field--wide">
+                    <label class="form-label">Описание</label>
+                    <textarea class="form-input" id="description" placeholder="Введите описание" rows="4"></textarea>
+                    <div class="form-hint">От 20 до 1000 символов</div>
+                    <div class="form-error"></div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="text-large">КБЖУ</p>
+                <p class="text-normal">Заполните данные о пищевой ценности блюда на 100г</p>
+
+                <div class="form-row">
+                    <div class="form-field form-field--narrow">
+                        <label class="form-label">Калорийность, ккал</label>
+                        <input type="text" class="form-input" id="calories" placeholder="Введите калорийность">
+                        <div class="form-hint">Целое число от 1 до 1000</div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-field form-field--narrow">
+                        <label class="form-label">Белки, г</label>
+                        <input type="text" class="form-input" id="protein" placeholder="Введите количество белка">
+                        <div class="form-hint">Целое число от 1 до 200</div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-field form-field--narrow">
+                        <label class="form-label">Жиры, г</label>
+                        <input type="text" class="form-input" id="fat" placeholder="Введите количество жиров">
+                        <div class="form-hint">Целое число от 1 до 200</div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="form-field form-field--narrow">
+                        <label class="form-label">Углеводы, г</label>
+                        <input type="text" class="form-input" id="carbs" placeholder="Введите количество углеводов">
+                        <div class="form-hint">Целое число от 1 до 200</div>
+                        <div class="form-error"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <p class="text-large">Состав</p>
+                <p class="text-normal">Выберите ингредиент и укажите его количество</p>
+
+                <div class="ingredients-list">
+                    <div class="form-row ingredient-row">
+                        <div class="form-field">
+                            <label class="form-label">Ингредиент *</label>
+                            <select class="form-input ingredient-select">
+                                <option value="" disabled selected>Выберите ингредиент</option>
+                                <option value="1">Картофель</option>
+                                <option value="2">Морковь</option>
+                                <option value="3">Лук</option>
+                            </select>
+                            <div class="form-hint">Единичный выбор</div>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label">Количество *</label>
+                            <div class="quantity-wrapper">
+                                <input type="text" class="form-input ingredient-quantity"
+                                    placeholder="Введите количество">
+                                <select class="form-input unit-select">
+                                    <option value="литр">литр</option>
+                                    <option value="грамм">грамм</option>
+                                    <option value="штука">штука</option>
+                                    <option value="стакан">стакан</option>
+                                </select>
+                            </div>
+                            <div class="form-hint">Целое число от 1 до 200</div>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="form-field form-field--placeholder"></div>
+                    </div>
+                </div>
+                <button type="button" class="add-ingredient-btn">Добавить ингредиент</button>
+            </div>
+
+            <div class="form-section">
+                <p class="text-large">Приготовление</p>
+                <p class="text-normal">Опишите процесс приготовления пошагово</p>
+
+                <div class="steps-list">
+                    <div class="step-row">
+                        <div class="step-field">
+                            <label class="form-label">Шаг 1 *</label>
+                            <input type="text" class="form-input step-input" placeholder="Введите действие">
+                            <div class="form-hint">От 5 до 200 символов</div>
+                            <div class="form-error"></div>
+                        </div>
+                        <div class="step-placeholder"></div>
+                    </div>
+                </div>
+                <button type="button" class="add-step-btn">Добавить шаг</button>
+            </div>
+
+            <div class="form-section">
+                <p class="text-large">Медиафайлы</p>
+                <div class="form-field form-field--wide media-field">
+                    <label class="form-label">Обложка рецепта *</label>
+                    <div class="file-upload">
+                        <input type="file" id="cover" accept=".jpg,.jpeg,.png">
+                        <label for="cover">Выберите файл</label>
+                    </div>
+                    <div class="form-hint">Формат: .jpg, .png</div>
+                    <div class="form-error"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Сохранить рецепт</button>
+        </form>
+    </main>
+    <footer>...</footer>
+
+    <script src="add_recipe_dynamic.js"></script>
+    <script src="add_recipe_validation.js"></script>
+    <script src="add_recipe_data.js"></script>
+</body>
+
+</html>

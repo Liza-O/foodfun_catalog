@@ -1,0 +1,87 @@
+.blog-content {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.blog-themes {
+    width: 240px;
+    margin: 0px 0px;
+    padding: 0;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+
+.theme-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   padding: 10px 0px;
+}
+
+.active{
+    color: #FFAE00;
+    font-weight: 600;
+}
+
+.theme-item:hover {
+    background-color: #FDFAF2; 
+}
+.themes-title {
+    margin-bottom: 20px;
+}
+
+/* Карточка статьи */
+.articles-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-image-container {
+    position: relative;
+}
+
+.article-image {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.theme-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: #FFAE00;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.article-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+

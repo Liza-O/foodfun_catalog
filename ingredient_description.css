@@ -1,0 +1,221 @@
+.ingredient-header {
+    display: flex;
+    gap: 95px;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.ingredient-photo {
+    width: 315px;
+    height: 315px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.ingredient-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* таблица КБЖУ */
+.nutrition {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    background-color: #FDFAF2;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nutri-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutri-table td {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #FFAE00;
+    border-right: 1px solid #FFAE00;
+    text-align: center;
+}
+
+.nutri-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.nutri-table td:last-child {
+    border-right: none;
+}
+
+.nutri-table tbody td.amount {
+    color: #FFAE00;
+}
+
+.recipes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.recipes-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+/* Галерея рецептов */
+.recipes-section {
+    margin: 0px 0;
+    padding: 0 20px;
+}
+
+.recipes-gallery-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.recipes-gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.recipes-gallery-track {
+    display: flex;
+    gap: 15px; 
+    transition: transform 0.4s ease;
+    will-change: transform;
+     margin: 0;
+    padding: 0; 
+}
+
+.recipe-card {
+    flex-shrink: 0;
+}
+
+/* Стрелки галереи */
+.gallery-arrow {
+    background: #FFAE00;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    z-index: 2;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-arrow:hover:not(:disabled) {
+    background: #e09b00;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-arrow:active:not(:disabled) {
+    transform: scale(0.95);
+}
+
+.gallery-arrow:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.5;
+}
+
+
+/* Стили для текста с кнопкой "Читать далее" */
+.description-text {
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+.description-text p{
+    margin-bottom: 20px;
+}
+
+.description-text.expanded {
+    max-height: 2000px;
+}
+
+.description-text ul {
+    margin: 0px 0;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+.description-text li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #000000;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #FFAE00;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 0;
+    margin: -10px 0 10px 0;
+    transition: color 0.3s ease;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+.read-more-btn:hover {
+    color: #e09b00;
+}
+
+/* Градиент для плавного скрытия текста */
+.description-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(transparent, white);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.description-text.expanded::after {
+    opacity: 0;
+}
+
+

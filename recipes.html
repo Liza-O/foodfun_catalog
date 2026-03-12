@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог рецептов: пошаговые инструкции и калорийность | Foodfun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="recipes.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="img/logo.png" alt="На главную" class="logo" onerror="this.src='img/default-image.png';">
+        </a>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="recipes.html" class="active">Рецепты</a>
+            <a href="ingredients.html">Ингредиенты</a>
+            <a href="blog.html">Блог</a>
+            <a href="guide.html">Справочник</a>
+            <a href="about_us.html">О нас</a>
+        </nav>
+        <div class="header-actions">
+            <a href="favorites.html" class="favorites-link" title="Избранное">
+                <span class="heart-icon"></span>
+            </a>
+            <a href="contacts.html" class="contact-btn">
+                Связаться с нами
+                <img src="img/send.png" alt="Сообщение" class="btn-icon" onerror="this.src='img/default-image.png';">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <p class="text-pseudo">Главная > Рецепты</p>
+
+        <div class="content">
+            <div class="block-filters">
+                <p class="text-large">Фильтры</p>
+                <div class="filter-group">
+                    <!-- Тип блюда (динамически) -->
+                    <div class="filter-item">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <p class="filter-label">Тип блюда</p>
+                            <span class="filter-arrow"></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">Загрузка...</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Время, мин -->
+                    <div class="filter-item">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <p class="filter-label">Время, мин</p>
+                            <span class="filter-arrow"></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="range-inputs">
+                                <div class="range-item">
+                                    <label>от</label>
+                                    <input type="number" value="0" min="0" class="range-number">
+                                </div>
+                                <div class="range-item">
+                                    <label>до</label>
+                                    <input type="number" value="200" min="0" class="range-number">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ингредиенты (динамически) -->
+                    <div class="filter-item">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <p class="filter-label">Ингредиенты</p>
+                            <span class="filter-arrow"></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">Загрузка...</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="catalog">
+                <div class="catalog-header-row">
+                    <p class="catalog-title-text">Каталог рецептов</p>
+                    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 10px;">
+                        <div class="search-wrapper">
+                            <input type="text" class="search-input" placeholder="Найти рецепт">
+                            <div class="search-icon"></div>
+                            <div id="popups" class="search-suggestions"></div>
+                        </div>
+                        <a href="add_recipe.html" class="add-recipe-circle" title="Добавить рецепт"></a>
+                    </div>
+                </div>
+                <div class="catalog-title">
+                    <p class="text-pseudo">Всего результатов: 6</p>
+                    <div class="sorting">
+                        <p class="text-normal text-accent">Сортировка:</p>
+                        <div class="sorting-option active">
+                            <p class="sorting-text text-normal">сначала новые</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;2025, Foodfun <br> Любое использование контента без письменного разрешения Foodfun запрещено.</p>
+    </footer>
+
+    <script src="recipes.js"></script>
+</body>
+
+</html>

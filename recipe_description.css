@@ -1,0 +1,131 @@
+.recipe-header {
+    display: flex;
+    width: 100%;           
+    gap: 50px;
+    align-items: flex-start;
+    height: auto;
+    min-height: 400px;
+}
+
+.recipe-photo {
+    width: 574px;         
+    height: auto;
+    max-height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.recipe-discription{
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+}
+
+.recipe-content {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    padding: 30px 0px;
+}
+
+/* таблица ингредиентов */
+.ingredients-table {
+    border-radius: 20px;
+    background-color: #FDFAF2;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 574px;
+}
+
+.ingredients-table td {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 12px;
+}
+
+.ingredients-table tbody tr:not(:last-child) td {
+    border-bottom: 1px solid #FFAE00;
+}
+
+.ingredients-table tbody tr td:not(:last-child) {
+    border-right: 1px solid #FFAE00;
+}
+
+.ingredients-table td.amount {
+    color: #FFAE00;
+    text-align: right;
+}
+
+.instruction {
+    list-style: none;
+    counter-reset: instruction-counter;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.instruction-item {
+    display: flex;
+    width: 100%;           
+    gap: 40px;
+    align-items: flex-start;
+    counter-increment: instruction-counter;
+}
+
+.instruction-item::before {
+    content: counter(instruction-counter);
+    font-family: Arsenal, sans-serif;
+    font-weight: bold;
+    font-size: 72px;
+    margin: 0; 
+    color: #FFAE00;
+    line-height: 1;
+}
+
+.instruction-item p {
+    margin: 0;
+    line-height: 1.5;
+    padding-top: 15px;
+}
+
+/* таблица КБЖУ */
+.nutrition {
+    border-radius: 20px;
+    background-color: #FDFAF2;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 574px;
+}
+
+.nutri-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.nutri-table td {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0;
+    padding: 8px 12px;
+    border-bottom: 1px solid #FFAE00;
+    border-right: 1px solid #FFAE00;
+    text-align: center;
+}
+
+.nutri-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.nutri-table td:last-child {
+    border-right: none;
+}
+
+.nutri-table tbody td.amount {
+    color: #FFAE00;
+}
+
